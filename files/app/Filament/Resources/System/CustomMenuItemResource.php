@@ -103,10 +103,9 @@ class CustomMenuItemResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('id'),
-                TextColumn::make('text')
-                    ->label(__('label.menu_item.text'))
-                    ->formatStateUsing(fn ($state, MenuItem $record) => $record->display_text)
-                    ->searchable(),
+                TextColumn::make('display_text')
+                    ->label(__('label.menu_item.menu'))
+                    ->searchable(query: fn (Builder $query, string $search) => $query->where('text', 'like', "%{$search}%")),
                 TextColumn::make('parent_text')
                     ->label(__('label.menu_item.parent_id'))
                     ->state(fn (MenuItem $record) => $record->parent_id ? $record->parent?->display_text : null)

@@ -11,7 +11,7 @@ use NexusPlugin\CustomMenu\Support\MenuRenderer;
 class Repository extends BasePlugin
 {
     public const ID = 'custom-menu';
-    public const VERSION = '1.0.0';
+    public const VERSION = '1.0.1';
     public const COMPATIBLE_NP_VERSION = '1.10.2';
 
     public function install(): void
@@ -205,13 +205,18 @@ class Repository extends BasePlugin
         );
 
         $defaults = [
-            ['text' => ['en' => 'Home', 'chs' => '首页', 'cht' => '首頁'], 'url' => 'index.php', 'sort' => 1000],
-            ['text' => ['en' => 'Torrents', 'chs' => '种子', 'cht' => '種子'], 'url' => 'torrents.php', 'sort' => 900],
+            ['text' => ['en' => 'Home', 'chs' => '首页', 'cht' => '首頁'], 'url' => 'index.php', 'sort' => 1200],
+            ['text' => ['en' => 'Forums', 'chs' => '论坛', 'cht' => '論壇'], 'url' => 'forums.php', 'sort' => 1100],
+            ['text' => ['en' => 'Torrents', 'chs' => '种子', 'cht' => '種子'], 'url' => 'torrents.php', 'sort' => 1000],
+            ['text' => ['en' => 'Requests', 'chs' => '求种', 'cht' => '求種'], 'url' => 'viewrequests.php', 'sort' => 900],
             ['text' => ['en' => 'Upload', 'chs' => '发布', 'cht' => '發布'], 'url' => 'upload.php', 'sort' => 800],
-            ['text' => ['en' => 'Requests', 'chs' => '求种', 'cht' => '求種'], 'url' => 'viewrequests.php', 'sort' => 700],
+            ['text' => ['en' => 'Subtitles', 'chs' => '字幕', 'cht' => '字幕'], 'url' => 'subtitles.php', 'sort' => 700],
             ['text' => ['en' => 'Top 10', 'chs' => '排行榜', 'cht' => '排行榜'], 'url' => 'topten.php', 'sort' => 600],
-            ['text' => ['en' => 'Rules', 'chs' => '规则', 'cht' => '規則'], 'url' => 'rules.php', 'sort' => 500],
-            ['text' => ['en' => 'FAQ', 'chs' => '常见问题', 'cht' => '常見問題'], 'url' => 'faq.php', 'sort' => 400],
+            ['text' => ['en' => 'Log', 'chs' => '日志', 'cht' => '日誌'], 'url' => 'log.php', 'sort' => 500],
+            ['text' => ['en' => 'Rules', 'chs' => '规则', 'cht' => '規則'], 'url' => 'rules.php', 'sort' => 400],
+            ['text' => ['en' => 'FAQ', 'chs' => '常见问题', 'cht' => '常見問題'], 'url' => 'faq.php', 'sort' => 300],
+            ['text' => ['en' => 'Staff', 'chs' => '管理组', 'cht' => '管理組'], 'url' => 'staff.php', 'sort' => 200],
+            ['text' => ['en' => 'Contact Staff', 'chs' => '联系管理组', 'cht' => '聯繫管理組'], 'url' => 'contactstaff.php', 'sort' => 100],
         ];
 
         foreach ($defaults as $row) {
