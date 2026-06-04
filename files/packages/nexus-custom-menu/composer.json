@@ -1,0 +1,23 @@
+{
+    "name": "xiaomlove/nexusphp-menu",
+    "description": "Custom front navigation menu plugin for NexusPHP.",
+    "type": "library",
+    "license": "GPL-2.0-only",
+    "autoload": {
+        "psr-4": {
+            "NexusPlugin\\CustomMenu\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NexusPlugin\\CustomMenu\\ServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": ">=8.2 <8.6"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
